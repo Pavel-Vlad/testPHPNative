@@ -1,5 +1,9 @@
 <?php
 
+if (empty($_SESSION['auth'])) {
+    header("Location: /");
+}
+
 if (!empty($_GET['select']) && is_numeric($_GET['select'])) {
 
     include $_SERVER['DOCUMENT_ROOT'] . '/include/__configs.php';
